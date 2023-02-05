@@ -45,7 +45,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatPaginatorModule,
     MatSortModule,
     MatSnackBarModule,
-
+   
+   
   ],
   providers: [],
   bootstrap: [AppComponent],
