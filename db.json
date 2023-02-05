@@ -126,18 +126,6 @@
       "package": 33
     },
     {
-      "id": 12,
-      "firstName": "Ambrose",
-      "lastName": "Khomishin",
-      "email": "akhomishinb@washington.edu",
-      "dob": "2004-08-20T06:35:39Z",
-      "gender": "Male",
-      "education": "Matric",
-      "company": "Lajo",
-      "experience": 90,
-      "package": 8
-    },
-    {
       "id": 13,
       "firstName": "Ezmeralda",
       "lastName": "Darridon",
@@ -2368,6 +2356,18 @@
       "experience": 4,
       "package": 32,
       "id": 201
+    },
+    {
+      "firstName": "Erkan",
+      "lastName": "Frank",
+      "email": "erkan@gmail.com",
+      "dob": "2023-02-04T23:00:00.000Z",
+      "gender": "male",
+      "education": "Matric",
+      "company": "ecomp",
+      "experience": 14,
+      "package": 17,
+      "id": 202
     }
   ]
 }
