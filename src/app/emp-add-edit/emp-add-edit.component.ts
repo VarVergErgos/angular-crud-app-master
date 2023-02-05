@@ -45,10 +45,11 @@ export class EmpAddEditComponent implements OnInit {
       education: new FormControl('', [Validators.required]),
       company: new FormControl('', [Validators.required]),
       experience: new FormControl(null, [
-        Validators.required,
+        Validators.pattern(/^[0-9]+(\.[0-9]{1,2})?$/),
+
         Validators.min(0),
         Validators.max(200),
-        Validators.pattern(/^[0-9]+(\.[0-9]{1,2})?$/),
+        Validators.required,
       ]),
       package: new FormControl(null, [
         Validators.required,
