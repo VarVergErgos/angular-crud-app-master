@@ -75,7 +75,8 @@
 
       <ng-container matColumnDef="package">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Package </th>
-        <td mat-cell *matCellDef="let row"> {{row.package | currency:'INR'}}L</td>
+       <!-- <td mat-cell *matCellDef="let row"> {{row.package | currency:'EUR'}}</td> -->
+       <td mat-cell *matCellDef="let row"> {{row.package | number:'1.0-2'}}</td>
       </ng-container>
 
       <ng-container matColumnDef="action">

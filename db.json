@@ -26,7 +26,7 @@
       "education": "Matric",
       "company": "Agivu",
       "experience": 200,
-      "package": 17,
+      "package": 17.36,
       "id": 2
     },
     {
@@ -54,7 +54,6 @@
       "package": 20
     },
     {
-      "id": 7,
       "firstName": "Dot",
       "lastName": "Staterfield",
       "email": "dstaterfield6@icq.com",
@@ -63,7 +62,8 @@
       "education": "Post Graduate",
       "company": "Riffpath",
       "experience": 10,
-      "package": 16
+      "package": 16.68,
+      "id": 7
     },
     {
       "id": 8,
@@ -86,7 +86,7 @@
       "education": "Diploma",
       "company": "Demizz",
       "experience": 30,
-      "package": 28,
+      "package": 28.36,
       "id": 9
     },
     {
