@@ -10,12 +10,20 @@
 
 <div class="main-body">
 
+ 
+
   <mat-form-field>
     <mat-label>Filter</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
   </mat-form-field>
+  <br>
 
-  <div class="table-container">
+  <div>
+    <button type="button" mat-raised-button color="primary" (click)="exportToExcel()">Export To Excel
+           
+          </button>
+  </div>
+  <div class="table-container" id="excel-table" >
     <table mat-table [dataSource]="dataSource" matSort>
 
       <!-- ID Column -->
@@ -26,7 +34,7 @@
 
       <!-- Progress Column -->
       <ng-container matColumnDef="firstName">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> First Name </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Vorname </th>
         <td mat-cell *matCellDef="let row"> {{row.firstName}}</td>
       </ng-container>
 
@@ -41,7 +49,7 @@
       </ng-container>
 
       <ng-container matColumnDef="dob">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> dob </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Geburtsdatum </th>
         <td mat-cell *matCellDef="let row"> {{row.dob | date:'dd.MM.yyyy'}}</td>
       </ng-container>
 

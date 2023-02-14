@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { EmpAddEditComponent } from './emp-add-edit/emp-add-edit.component';
 import { EmployeeService } from './services/employee.service';
@@ -6,7 +6,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { CoreService } from './core/core.service';
-
+import  * as XLSX from 'xlsx';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
     'action',
   ];
   dataSource!: MatTableDataSource<any>;
+  fileName="ExcelSheetList.xlsx";
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -36,6 +37,21 @@ export class AppComponent implements OnInit {
     private _empService: EmployeeService,
     private _coreService: CoreService
   ) {}
+
+  exportToExcel() :void{
+    /** path the table id  id=excel-table*/
+    /**  <div class="table-container" id="excel-table" > */
+    let element = document.getElementById('excel-table');
+    const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
+
+    /**generate Workbook and add the worksheet */
+
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Customer-List');
+
+    /**Save the file */
+    XLSX.writeFile(wb, this.fileName);
+  }
 
   ngOnInit(): void {
     this.getEmployeeList();
