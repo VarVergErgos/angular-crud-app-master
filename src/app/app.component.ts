@@ -27,7 +27,8 @@ export class AppComponent implements OnInit {
     'action',
   ];
   dataSource!: MatTableDataSource<any>;
-  fileName="ExcelSheetList.xlsx";
+  fileName = 'ExcelSheetList.xlsx';
+  stringifiedExcelData : any;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -38,11 +39,19 @@ export class AppComponent implements OnInit {
     private _coreService: CoreService
   ) {}
 
-  exportToExcel() :void{
+  exportToExcel(): void {
     /** path the table id  id=excel-table*/
     /**  <div class="table-container" id="excel-table" > */
+    //call our method to get all datas
+    
+    this.getExcelListExport();
+
     let element = document.getElementById('excel-table');
-    const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
+  // here we only get the selected pages as output not all datas of the getEmployee
+  //  const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
+
+    const ws: XLSX.WorkSheet = XLSX.utils.json_to_sheet(this.stringifiedExcelData);
+  //  console.log(this.stringifiedExcelData);
 
     /**generate Workbook and add the worksheet */
 
@@ -51,10 +60,22 @@ export class AppComponent implements OnInit {
 
     /**Save the file */
     XLSX.writeFile(wb, this.fileName);
+
+   
+  }
+
+  getExcelListExport(): void {
+    this._empService.getEmployeeList().subscribe((result) => {
+      //  console.log(result);
+      // Convert to JSON
+      let datas: any = result;
+      this.stringifiedExcelData = datas;
+    });
   }
 
   ngOnInit(): void {
     this.getEmployeeList();
+    this.getExcelListExport();
   }
 
   openAddEditEmpForm() {

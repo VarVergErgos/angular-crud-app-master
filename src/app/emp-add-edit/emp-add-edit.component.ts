@@ -21,13 +21,13 @@ export class EmpAddEditComponent implements OnInit {
   ];
 
   constructor(
+   
     private _fb: FormBuilder,
     private _empService: EmployeeService,
     private _dialogRef: MatDialogRef<EmpAddEditComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _coreService: CoreService
   ) {
-    
     this.empForm = this._fb.group({
       firstName: new FormControl('', [
         Validators.required,
@@ -65,7 +65,6 @@ export class EmpAddEditComponent implements OnInit {
   }
 
 
-
   public checkError = (controlName: string, errorName: string) => {
     console.log(this.empForm.value);
     console.log(this.empForm.valid);
@@ -81,6 +80,7 @@ export class EmpAddEditComponent implements OnInit {
             next: (val: any) => {
               this._coreService.openSnackBar('Employee detail updated!');
               this._dialogRef.close(true);
+             
             },
             error: (err: any) => {
               console.error(err);
@@ -91,6 +91,7 @@ export class EmpAddEditComponent implements OnInit {
           next: (val: any) => {
             this._coreService.openSnackBar('Employee added successfully');
             this._dialogRef.close(true);
+           
           },
           error: (err: any) => {
             console.error(err);

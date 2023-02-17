@@ -18,7 +18,7 @@
   },
   "employees": [
     {
-      "firstName": "Kendy",
+      "firstName": "Kenneth",
       "lastName": "MacElholm",
       "email": "kmacelholm1@sina.com.cn",
       "dob": "1991-09-12T22:14:02Z",
@@ -2368,78 +2368,6 @@
       "experience": 25,
       "package": 200,
       "id": 203
-    },
-    {
-      "firstName": "Peter",
-      "lastName": "Maffay",
-      "email": "peter@gmail.com",
-      "dob": "2023-01-31T23:00:00.000Z",
-      "gender": "male",
-      "education": "Matric",
-      "company": "Scobe",
-      "experience": 125,
-      "package": 195,
-      "id": 204
-    },
-    {
-      "firstName": "Oliver",
-      "lastName": "Bierhof",
-      "email": "OBier@gmail.com",
-      "dob": "2023-02-04T23:00:00.000Z",
-      "gender": "male",
-      "education": "Matric",
-      "company": "Deutschland",
-      "experience": 3,
-      "package": 6,
-      "id": 205
-    },
-    {
-      "firstName": "Emil",
-      "lastName": "Emil",
-      "email": "emil@gmai.com",
-      "dob": "2023-01-31T23:00:00.000Z",
-      "gender": "male",
-      "education": "Matric",
-      "company": "Köln",
-      "experience": 3,
-      "package": 3,
-      "id": 206
-    },
-    {
-      "firstName": "Sascha",
-      "lastName": "Sascha",
-      "email": "Scha@gmail.com",
-      "dob": "2023-01-31T23:00:00.000Z",
-      "gender": "male",
-      "education": "Matric",
-      "company": "franken",
-      "experience": 1,
-      "package": 2,
-      "id": 207
-    },
-    {
-      "firstName": "frank",
-      "lastName": "Senatra",
-      "email": "Senatra@gmail.com",
-      "dob": "2023-01-31T23:00:00.000Z",
-      "gender": "male",
-      "education": "Matric",
-      "company": "frank",
-      "experience": 2,
-      "package": 3,
-      "id": 208
-    },
-    {
-      "firstName": "Emil",
-      "lastName": "Emil",
-      "email": "emil@gmail.com",
-      "dob": "2023-01-31T23:00:00.000Z",
-      "gender": "male",
-      "education": "Matric",
-      "company": "deut",
-      "experience": 2,
-      "package": 2,
-      "id": 209
     }
   ]
 }
